@@ -38,6 +38,9 @@ model = LogisticRegression(random_state=0)
 
 model.fit(X, y)
 
+@app.get('/')
+def home():
+    return {"message" : "Hello"}
 
 # Creating an Endpoint to receive the data
 # to make prediction on.
